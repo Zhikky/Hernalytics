@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300&display=swap");
+
+.map {
+  width: 70%;
+  height: 95%;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  position: relative;
+  zoom: 1;
+  margin-left: 150px;
+  padding-top: 20px;
+
+  svg {
+    path {
+      stroke: #00344d;
+      stroke-width: 1px;
+      z-index: 2;
+
+      &:hover {
+        fill: #e5b805;
+      }
+    }
+
+    g {
+      fill: red;
+    }
+  }
+
+  text {
+    font-family: "Inter";
+    font-weight: 100;
+    font-size: 8px;
+    line-height: 13px;
+    stroke: #00344d;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+
+  path[name="Yobe"],
+  path[name="Gombe"],
+  path[name="Adamawa"],
+  path[name="Taraba"] {
+    fill: red;
+  }
+
+  path[name="Sokoto"],
+  path[name="Kebbi"],
+  path[name="Niger"],
+  path[name="Zamfara"],
+  path[name="Kaduna"],
+  path[name="Kastina"],
+  path[name="Kaduna"],
+  path[name="Federal Capital Territory"],
+  path[name="Nassarawa"],
+  path[name="Plateau"],
+  path[name="Bauchi"],
+  path[name="Kano"],
+  path[name="Oyo"],
+  path[name="Osun"],
+  path[name="Lagos"],
+  path[name="Ogun"] {
+    fill: #64ccff;
+  }
+
+  path[name="Kwara"],
+  path[name="Ekiti"],
+  path[name="Kogi"],
+  path[name="Benue"],
+  path[name="Edo"],
+  path[name="Ondo"],
+  path[name="Delta"],
+  path[name="Bayelsa"],
+  path[name="Rivers"],
+  path[name="Cross River"],
+  path[name="Akwa Ibom"],
+  path[name="Abia"],
+  path[name="Imo"],
+  path[name="Anambra"],
+  path[name="Enugu"],
+  path[name="Ebonyi"],
+  path[name="Kwara"],
+  path[name="Borno"] {
+    fill: #0aa83f;
+  }
+
+  path[name="Jigawa"] {
+    fill: #ffffff;
+  }
+
+  @media screen and (max-width: 700px) {
+    margin-left: 20px;
+    height: auto;
+
+    svg {
+      height: 220px;
+    }
+  }
+
+  .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 200px;
+    height: fit-content;
+    background: #131726;
+    border: 1px solid #212842;
+    border-radius: 6px;
+    padding: 10px;
+    transition: visibility 0s, opacity 1s ease-out;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: "Jost";
+    span {
+      color: #ffffff54;
+    }
+    div {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid #24283A;
+      p {
+        color: #ffffff;
+        font-size: 14px;
+        margin: 5px 0px;
+        :nth-child(2){
+          margin-left: 20px;
+        }
+      }
+      
+    }
+  }
+  path:hover + .content {
+    visibility: visible;
+    opacity: 1;
+    fill: yellow;
+  }
+}
+
